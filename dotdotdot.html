@@ -1,0 +1,38 @@
+<html>
+  <body>
+    javascript is
+    <span
+      class="dot"
+      style="background-color: lightsteelblue; padding: 0 10px; cursor: pointer"
+      onclick="
+      {document.querySelector('.lorem').style.display='inline';
+      document.querySelector('.dot').style.display='none';}
+      "
+      >...</span
+    >
+    <span
+      class="lorem"
+      style="display: none; cursor: pointer"
+      onclick="
+    {document.querySelector('.lorem').style.display='none';
+    document.querySelector('.dot').style.display='inline';}
+    "
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, adipisci
+      sit. Adipisci temporibus eveniet nisi nulla vel quia iste corporis
+      perferendis ad. Porro debitis laudantium fuga cumque cupiditate ullam a?
+    </span>
+    <hr />
+
+    javascript is
+    <span
+      class="dot2"
+      style="background-color: lightsteelblue; padding: 0 10px; cursor: pointer"
+      onclick="
+      {document.querySelector('.lorem2').innerText=`Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugiat officia iste fugit suscipit quos iure, odio a. Ex, harum vitae qui odio a laudantium quia fugiat voluptatibus laborum commodi?`;
+      this.style.display='none';}"
+      >...</span
+    >
+    <span class="lorem2" style="cursor: pointer"></span>
+  </body>
+</html>
