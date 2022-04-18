@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <h1>배열</h1>
+    <ul></ul>
+    <script>
+      const $ = (selector) => document.querySelector(selector);
+      let tag = '';
+      let contents = ['html', 'css', 'javascript'];
+      for (let i = 0; i < contents.length; i++) {
+        tag = tag + `<li>${contents[i]}</li>`;
+      }
+      $('ul').innerHTML = tag;
+    </script>
+  </body>
+</html>

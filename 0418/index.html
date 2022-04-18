@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      let topics = [
+        {
+          id: 1,
+          title: 'html',
+          body: 'html is ...',
+        },
+        {
+          id: 2,
+          title: 'css',
+          body: 'css is ...',
+        },
+        {
+          id: 3,
+          title: 'javascript',
+          body: 'javascript is ...',
+        },
+      ];
+    </script>
+  </head>
+
+  <body>
+    <h1><a href="index.html">WEB</a></h1>
+    <nav>
+      <ol></ol>
+    </nav>
+    <article>
+      <h2>Welcome</h2>
+      Hello, WEB
+    </article>
+    <script>
+      let list_up = (array) => {
+        let navTag = '';
+        //map으로 바꿔보자
+        for (let i = 0; i < array.length; i++) {
+          navTag =
+            navTag +
+            `
+                <li>
+                    <a href="#${topics[i].id}.html" id="${topics[i].id}" onclick="
+                        event.preventDefault();
+                        console.log(event.target.id);
+                        for(let i=0; i<topics.length; i++) {
+                            if (topics[i].id === Number(event.target.id)) {
+                                console.log(11);
+                                document.querySelector('article').innerHTML = '<h2>${topics[i].title} </h2> ${topics[i].body}';
+                                break;
+                            }
+                        }
+                    ">
+                        ${topics[i].title}
+                    </a>
+                </li>`;
+        }
+        document.querySelector('nav ol').innerHTML = navTag;
+      };
+      list_up(topics);
+    </script>
+  </body>
+</html>
